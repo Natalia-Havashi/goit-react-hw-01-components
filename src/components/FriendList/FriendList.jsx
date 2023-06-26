@@ -12,7 +12,7 @@ export const Friend = ({friends}) => {
         return (
         <ul className="friend-list">
          
-         
+         <FriendList />
          
         </ul>
     ) 
