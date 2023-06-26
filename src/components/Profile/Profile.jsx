@@ -1,18 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 import user from './user.json'
-// import PropTypes from 'prop-types';
+import './Profile.module.css'
 
-// Опис компонента <Profile>
-// Компонент повинен приймати кілька пропсів з інформацією про користувача:
-
-// username — ім'я користувача
-// tag — тег в соціальній мережі без @
-// location — місто і країна
-// avatar — посилання на зображення
-// stats — об'єкт з інформацією про активності
-
-const Div = () => {
+export const Div = () => {
     return (
         <div className="profile">
         <div className="description">
@@ -44,4 +34,4 @@ const Div = () => {
         )
 } 
 
-ReactDOM.createRoot(document.getElementById('root')).render(<Div />);
+// ReactDOM.createRoot(document.getElementById('root')).render(<Div />);
