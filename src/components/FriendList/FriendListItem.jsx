@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
+import { AvatarFriend, FriendName, List, SpanIsOnline } from './FriendList.styled';
 
 export const FriendList = ({id,avatar, name, isOnline}) => {
     return (
-<li key={id}>
-<span className="status">{isOnline}</span>
-<img className="avatar" src={avatar} alt={name} width={48} />
-<p className="name">{name}</p>
-</li>
+<List key={id}>
+<SpanIsOnline isOnline={isOnline}></SpanIsOnline>
+<AvatarFriend src={avatar} alt={name} width={48} />
+<FriendName>{name}</FriendName>
+</List>
 
 
     ) 
@@ -15,8 +16,8 @@ export const FriendList = ({id,avatar, name, isOnline}) => {
 }
 
 FriendList.propTypes = {
-  id:PropTypes.number.isRequired,
-  avatar: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  isOnline: PropTypes.bool.isRequired,
+  
+  avatar: PropTypes.string,
+  name: PropTypes.string,
+  isOnline: PropTypes.bool,
 }
