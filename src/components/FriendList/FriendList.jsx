@@ -25,10 +25,10 @@ export const Friends = ({friends}) => {
 Friends.propTypes = {
    friends: PropTypes.arrayOf(
        PropTypes.exact({
-           id: PropTypes.number,
-           avatar: PropTypes.string,
-           isOnline: PropTypes.bool,
-           name: PropTypes.string,
-       })
-   )
+           id: PropTypes.number.isRequired,
+           avatar: PropTypes.string.isRequired,
+           isOnline: PropTypes.bool.isRequired,
+           name: PropTypes.string.isRequired,
+       }).isRequired,
+   ).isRequired,
 }
